@@ -1,9 +1,9 @@
 {
-  "name": "electron-vite-react",
-  "version": "2.1.0",
+  "name": "vite-electron",
+  "version": "1.0.0",
   "main": "dist-electron/main/index.js",
   "description": "Electron Vite React boilerplate.",
-  "author": "草鞋没号 <308487730@qq.com>",
+  "author": "amar-jay <me@themanan.me>",
   "license": "MIT",
   "private": true,
   "debug": {
@@ -12,6 +12,10 @@
     }
   },
   "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
     "dev": "vite",
     "build": "tsc && vite build && electron-builder",
     "preview": "vite preview",
@@ -45,8 +49,9 @@
         "name": "@electron-forge/publisher-github",
         "config": {
           "repository": {
-            "owner": "erikhofer",
-            "name": "electron-publish-example"
+            "owner": "amar-jay",
+            "name": "vite-electron",
+            "draft": true
           }
         }
         }]

@@ -3,7 +3,7 @@
   "version": "2.1.0",
   "main": "dist-electron/main/index.js",
   "description": "Electron Vite React boilerplate.",
-  "author": "草鞋没号 <308487730@qq.com>",
+  "author": "amar jay",
   "license": "MIT",
   "private": true,
   "debug": {
@@ -18,24 +18,40 @@
     "e2e": "npx playwright test"
   },
   "devDependencies": {
+    "@electron-forge/publisher-github": "^6.0.4",
     "@playwright/test": "^1.29.2",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.0.1",
-    "electron": "^22.0.3",
-    "electron-builder": "^23.6.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sass": "^1.57.1",
-    "typescript": "^4.9.4",
-    "vite": "^4.0.4",
-    "vite-electron-plugin": "^0.7.4",
-    "vite-plugin-electron-renderer": "^0.11.4"
+    "typescript": "^4.9.4"
   },
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
   },
   "dependencies": {
-    "esbuild": "^0.17.5"
+    "esbuild": "^0.17.5",
+    "electron": "^22.0.3",
+    "electron-builder": "^23.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.57.1",
+    "@vitejs/plugin-react": "^3.0.1",
+    "vite": "^4.0.4",
+    "vite-electron-plugin": "^0.7.4",
+    "vite-plugin-electron-renderer": "^0.11.4"
+  },
+  "config": {
+    "forge": {
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "erikhofer",
+              "name": "electron-publish-example"
+            }
+          }
+        }
+      ]
+    }
   }
 }
